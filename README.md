@@ -7,6 +7,6 @@ This repository documents the setup and configuration of my Cyber Lab, focused o
 
 🎯 Objectives:
 	•	Build a secure and segmented lab environment.
-	•	Implement Kali Purple and Suricata (via Docker container) for network monitoring and threat detection.
+	•	Implement Kali Purple machine, Suricata (via Docker container), Snort (via Docker container), pfSense firewall (via VM) for network monitoring and threat detection.
 	•	Integrate DevSecOps practices for continuous security monitoring and automation.
 	•	Conduct Hydra testing and other red team exercises.
