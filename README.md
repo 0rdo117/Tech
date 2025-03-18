@@ -5,7 +5,9 @@ Cyber Lab for C|ND & C|EH into DevSecOps
 
 This repository documents the setup and configuration of my Cyber Lab, focused on integrating Certified Network Defender (C|ND) and Certified Ethical Hacker (C|EH) methodologies into a DevSecOps environment.
 
+
 🎯 Objectives:
+
 - Build a secure and segmented lab environment.
 - Implement Kali Purple machine for Red Testing.
 - Deploy Suricata, Snort (via Docker containers) for network monitoring and threat detection.
@@ -13,6 +15,7 @@ This repository documents the setup and configuration of my Cyber Lab, focused o
 - Security Onion (VM) planned for future implementation.
 - Integrate DevSecOps practices for continuous security monitoring and automation.
 - Conduct Hydra testing and other red team exercises.
+
 
  ## Hardware Overview  
 
@@ -35,17 +38,18 @@ This repository documents the setup and configuration of my Cyber Lab, focused o
 - **Access Point**: WPA2/3 enabled (No built-in firewall)
 
 
-
 ## Network Configuration  
 
 ### **IP Addressing**  
 | Device               | IP Address       | Role                  |
 |----------------------|------------------|-----------------------|
-| Router               | 192.168.1.1      | Gateway               |
-| pfSense Firewall     | 192.168.1.2      | Network Segmentation  |
-| HP ProCurve Switch   | 192.168.1.3      | Core Switch           |
-| Hunter (Kali Purple) | 192.168.1.100    | Red Team Testing      |
-| Security Onion (VM)  | 192.168.1.101    | Network Monitoring    |
+| Router               | 192.168.x.1      | Gateway               |
+| pfSense Firewall (VM)| 192.168.x.2      | Network Segmentation  |
+| HP ProCurve Switch   | 192.168.x.3      | Core Switch           |
+| Hunter (Kali Purple) | 192.168.x.100    | Red Team Testing      |
+| Security Onion (VM)  | 192.168.x.101    | Network Monitoring    |
+| Splunk (VM)          | 192.168.x.102.   | Log Collection        |
+
 
 ### **VLANs & Segmentation**  
 - **VLAN 10**: Management Network  
