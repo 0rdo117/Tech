@@ -22,7 +22,7 @@ This repository documents the setup and configuration of my Cyber Lab, focused o
 ### **Networking Devices**  
 - **Router**: Netgear AX4200  
 - **Switches**:  
-  - HP ProCurve 2910al-24-POE (Rex) 
+  - HP Pro Curve 2910al-24G-POE (Rex) 
   - Netgear switch (unmanaged) 
 
 ### **Servers & Endpoints**  
