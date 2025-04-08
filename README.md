@@ -22,7 +22,7 @@ This repository documents the setup and configuration of my Cyber Lab, focused o
 ### **Networking Devices**  
 - **Router**: Netgear AX4200  
 - **Switches**:  
-  - HP ProCurve J9146A (Rex) 
+  - HP ProCurve 2910al-24-POE (Rex) 
   - Netgear switch (unmanaged) 
 
 ### **Servers & Endpoints**  
@@ -52,14 +52,14 @@ This repository documents the setup and configuration of my Cyber Lab, focused o
 | HP ProCurve Switch   | 192.168.x.3      | Core Switch           |
 | Hunter (Kali Purple) | 192.168.x.100    | Red Team Testing      |
 | Security Onion (VM)  | 192.168.x.101    | Network Monitoring    |
-| Splunk (VM)          | 192.168.x.102.   | Log Collection        |
+| Splunk (VM)          | 192.168.x.102    | Log Collection        |
 
 
 ### **VLANs & Segmentation**  
-- **VLAN 10**: Management Network  
-- **VLAN 20**: Security Tools  
-- **VLAN 30**: Red Team Testing  
-- **VLAN 40**: Guest/IoT Devices
+- **VLAN 20**: Management Network  
+- **VLAN 30**: Security Tools  
+- **VLAN 40**: Red Team Testing  
+- **VLAN 50**: Guest/IoT Devices
 
 
 ## Future Plans & Upgrades  
