@@ -1,0 +1,257 @@
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-04-19 16:07 EDT
+Nmap scan report for 192.168.1.17
+Host is up (0.0060s latency).
+Not shown: 998 closed udp ports (port-unreach), 997 closed tcp ports (reset)
+PORT    STATE         SERVICE VERSION
+22/tcp  open          ssh     OpenSSH 3.7.1p2 (protocol 2.0)
+| ssh-hostkey: 
+|_  2048 fa:c8:25:3b:4b:ec:4f:2e:03:ff:77:6f:20:21:1c:5b (RSA)
+23/tcp  open          telnet
+| fingerprint-strings: 
+|   GenericLines: 
+|     [?7l
+|     [3;23r
+|     [?6l
+|     [1;1H
+|     [?25l
+|     [1;1HProCurve J9146A 2910al-24G-PoE Switch
+|     Software revision W.14.38
+|     Copyright (C) 1991-2009 Hewlett-Packard Co. All Rights Reserved.
+|     RESTRICTED RIGHTS LEGEND
+|     Use, duplication, or disclosure by the Government is subject to restrictions
+|     forth in subdivision (b) (3) (ii) of the Rights in Technical Data and
+|     Computer Software clause at 52.227-7013.
+|     HEWLETT-PACKARD COMPANY, 3000 Hanover St., Palo Alto, CA 94303
+|     We'd like to keep you up to date about:
+|     Software feature updates
+|     product announcements
+|     Special events
+|     Please register your products now at: www.ProCurve.com
+|     [1;24r
+|     [1;1H
+|     [24;1HPress any key to continue
+|     [24;1H
+|     [?25h
+|     [24;27H
+|     [?7l
+|     [1;24r
+|     [?6l
+|     [24;27H
+|     [1;24r
+|     [24;1H
+|     [24;1H
+|     [24;1H
+|     [?25h
+|     [24;1H
+|     [24;1HREX# 
+|     [24;1H
+|     [24;6H
+|     [24;1H
+|     [?25h
+|     [24;6H
+|     [24;0H
+|   NULL: 
+|     [?7l
+|     [3;23r
+|     [?6l
+|     [1;1H
+|     [?25l
+|     [1;1HProCurve J9146A 2910al-24G-PoE Switch
+|     Software revision W.14.38
+|     Copyright (C) 1991-2009 Hewlett-Packard Co. All Rights Reserved.
+|     RESTRICTED RIGHTS LEGEND
+|     Use, duplication, or disclosure by the Government is subject to restrictions
+|     forth in subdivision (b) (3) (ii) of the Rights in Technical Data and
+|     Computer Software clause at 52.227-7013.
+|     HEWLETT-PACKARD COMPANY, 3000 Hanover St., Palo Alto, CA 94303
+|     We'd like to keep you up to date about:
+|     Software feature updates
+|     product announcements
+|     Special events
+|     Please register your products now at: www.ProCurve.com
+|     [1;24r
+|     [1;1H
+|     [24;1HPress any key to continue
+|     [24;1H
+|     [?25h
+|_    [24;27H
+80/tcp  open          http    eHTTP 2.0 (HP ProCurve Switch 2910al-24G-PoE http config)
+|_http-title:    REX -       ProCurve 2910al-24G-PoE Switch (J9146A)   
+|_http-server-header: eHTTP v2.0
+69/udp  open|filtered tftp
+161/udp open          snmp    SNMPv1 server; Hewlett-Packard SNMPv3 server (public)
+| snmp-info: 
+|   enterprise: Hewlett-Packard
+|   engineIDFormat: unknown
+|   engineIDData: 0000e4115b6a6480
+|   snmpEngineBoots: 200
+|_  snmpEngineTime: 2d18h50m19s
+| snmp-netstat: 
+|   TCP  0.0.0.0:22           0.0.0.0:0
+|   TCP  0.0.0.0:23           0.0.0.0:0
+|   TCP  0.0.0.0:80           0.0.0.0:0
+|   TCP  0.0.0.0:1506         0.0.0.0:0
+|   TCP  0.0.0.0:1513         0.0.0.0:0
+|   TCP  127.0.0.1:9999       0.0.0.0:0
+|   TCP  127.0.0.1:9999       127.0.0.1:41474
+|   TCP  127.0.0.1:9999       127.0.0.1:55727
+|   TCP  127.0.0.1:34225      127.0.0.1:35682
+|   TCP  127.0.0.1:34656      127.0.0.1:50096
+|   TCP  127.0.0.1:35682      127.0.0.1:34225
+|   TCP  127.0.0.1:37383      127.0.0.1:41998
+|   TCP  127.0.0.1:37780      127.0.0.1:42792
+|   TCP  127.0.0.1:38638      127.0.0.1:44509
+|   TCP  127.0.0.1:40094      127.0.0.1:52815
+|   TCP  127.0.0.1:40841      127.0.0.1:48914
+|   TCP  127.0.0.1:41474      127.0.0.1:9999
+|   TCP  127.0.0.1:41998      127.0.0.1:37383
+|   TCP  127.0.0.1:42026      127.0.0.1:53781
+|   TCP  127.0.0.1:42792      127.0.0.1:37780
+|   TCP  127.0.0.1:43896      127.0.0.1:55025
+|   TCP  127.0.0.1:44509      127.0.0.1:38638
+|   TCP  127.0.0.1:46776      127.0.0.1:56156
+|   TCP  127.0.0.1:48232      127.0.0.1:63696
+|   TCP  127.0.0.1:48715      127.0.0.1:57125
+|   TCP  127.0.0.1:48914      127.0.0.1:40841
+|   TCP  127.0.0.1:50096      127.0.0.1:34656
+|   TCP  127.0.0.1:52815      127.0.0.1:40094
+|   TCP  127.0.0.1:53781      127.0.0.1:42026
+|   TCP  127.0.0.1:55025      127.0.0.1:43896
+|   TCP  127.0.0.1:55727      127.0.0.1:9999
+|   TCP  127.0.0.1:56156      127.0.0.1:46776
+|   TCP  127.0.0.1:57125      127.0.0.1:48715
+|   TCP  127.0.0.1:63696      127.0.0.1:48232
+|   TCP  192.168.1.17:22      192.168.1.37:49778
+|   TCP  192.168.1.17:22      192.168.1.37:49790
+|   TCP  192.168.1.17:22      192.168.1.37:58416
+|   TCP  192.168.1.17:23      192.168.1.37:34660
+|   TCP  192.168.1.17:23      192.168.1.37:34890
+|   TCP  192.168.1.17:23      192.168.1.37:48456
+|   TCP  192.168.1.17:80      192.168.1.37:50236
+|   TCP  192.168.1.17:80      192.168.1.37:50246
+|   TCP  192.168.1.17:80      192.168.1.37:52980
+|   TCP  192.168.1.17:80      192.168.1.37:52990
+|   TCP  192.168.1.17:80      192.168.1.37:52996
+|   TCP  192.168.1.17:80      192.168.1.37:52998
+|   TCP  192.168.1.17:80      192.168.1.37:53002
+|   TCP  192.168.1.17:80      192.168.1.37:53010
+|   TCP  192.168.1.17:80      192.168.1.37:53012
+|   TCP  192.168.1.17:80      192.168.1.37:53014
+|   TCP  192.168.1.17:80      192.168.1.37:53030
+|   TCP  192.168.1.17:80      192.168.1.37:53096
+|   TCP  192.168.1.17:80      192.168.1.37:53104
+|   TCP  192.168.1.17:80      192.168.1.37:53126
+|   TCP  192.168.1.17:80      192.168.1.37:53136
+|   TCP  192.168.1.17:80      192.168.1.37:53142
+|   TCP  192.168.1.17:80      192.168.1.37:53996
+|   UDP  0.0.0.0:69           *:*
+|   UDP  0.0.0.0:161          *:*
+|   UDP  0.0.0.0:1507         *:*
+|_  UDP  127.0.0.1:43834      *:*
+| snmp-interfaces: 
+|   1
+|     MAC address: e4:11:5b:6a:64:bf (Hewlett Packard)
+|     Type: ethernetCsmacd  Speed: 100 Mbps
+|     Traffic stats: 1.75 Gb sent, 82.09 Mb received
+|   2
+|     MAC address: e4:11:5b:6a:64:be (Hewlett Packard)
+|     Type: ethernetCsmacd  Speed: 1 Gbps
+|     Traffic stats: 87.27 Mb sent, 1.83 Gb received
+|   5
+|     MAC address: e4:11:5b:6a:64:bb (Hewlett Packard)
+|     Type: ethernetCsmacd  Speed: 1 Gbps
+|     Traffic stats: 61.72 Mb sent, 1.37 Mb received
+|   6
+|     MAC address: e4:11:5b:6a:64:ba (Hewlett Packard)
+|     Type: ethernetCsmacd  Speed: 1 Gbps
+|     Traffic stats: 62.91 Mb sent, 291.34 Kb received
+|   7
+|     MAC address: e4:11:5b:6a:64:b9 (Hewlett Packard)
+|     Type: ethernetCsmacd  Speed: 1 Gbps
+|     Traffic stats: 63.34 Mb sent, 21.27 Mb received
+|   8
+|     MAC address: e4:11:5b:6a:64:b8 (Hewlett Packard)
+|     Type: ethernetCsmacd  Speed: 1 Gbps
+|     Traffic stats: 4.79 Mb sent, 133.96 Kb received
+|   DEFAULT_VLAN
+|     IP address: 192.168.1.17  Netmask: 255.255.255.0
+|     MAC address: e4:11:5b:6a:64:80 (Hewlett Packard)
+|     Type: propVirtual  Speed: 0 Kbps
+|     Traffic stats: 0.00 Kb sent, 0.00 Kb received
+|   VLAN20
+|     IP address: 192.168.20.1  Netmask: 255.255.255.0
+|     MAC address: e4:11:5b:6a:64:80 (Hewlett Packard)
+|     Type: propVirtual  Speed: 0 Kbps
+|     Traffic stats: 0.00 Kb sent, 0.00 Kb received
+|   VLAN30
+|     IP address: 192.168.30.1  Netmask: 255.255.255.0
+|     MAC address: e4:11:5b:6a:64:80 (Hewlett Packard)
+|     Type: propVirtual  Speed: 0 Kbps
+|     Traffic stats: 0.00 Kb sent, 0.00 Kb received
+|   VLAN40
+|     IP address: 192.168.40.1  Netmask: 255.255.255.0
+|     MAC address: e4:11:5b:6a:64:80 (Hewlett Packard)
+|     Type: propVirtual  Speed: 0 Kbps
+|     Traffic stats: 0.00 Kb sent, 0.00 Kb received
+|   HP ProCurve Switch software loopback interface
+|     IP address: 127.0.0.1  Netmask: 255.255.255.255
+|     Type: softwareLoopback  Speed: 0 Kbps
+|_    Traffic stats: 36.58 Kb sent, 40.40 Kb received
+| snmp-sysdescr: ProCurve J9146A 2910al-24G-PoE Switch, revision W.14.38, ROM W.14.04 (/sw/code/build/sbm(t4a))
+|_  System uptime: 2d18h49m56.99s (24059699 timeticks)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port23-TCP:V=7.94SVN%I=7%D=4/19%Time=6804027C%P=x86_64-pc-linux-gnu%r(N
+SF:ULL,304,"\xff\xfd\x18\xff\xfd\x1f\xff\xfb\x01\x1b\[2J\x1b\[\?7l\x1b\[3;
+SF:23r\x1b\[\?6l\x1b\[1;1H\x1b\[\?25l\x1b\[1;1HProCurve\x20J9146A\x202910a
+SF:l-24G-PoE\x20Switch\r\r\nSoftware\x20revision\x20W\.14\.38\r\r\n\r\r\nC
+SF:opyright\x20\(C\)\x201991-2009\x20Hewlett-Packard\x20Co\.\x20\x20All\x2
+SF:0Rights\x20Reserved\.\r\n\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20RESTR
+SF:ICTED\x20RIGHTS\x20LEGEND\r\n\r\n\x20Use,\x20duplication,\x20or\x20disc
+SF:losure\x20by\x20the\x20Government\x20is\x20subject\x20to\x20restriction
+SF:s\r\n\x20as\x20set\x20forth\x20in\x20subdivision\x20\(b\)\x20\(3\)\x20\
+SF:(ii\)\x20of\x20the\x20Rights\x20in\x20Technical\x20Data\x20and\r\n\x20C
+SF:omputer\x20Software\x20clause\x20at\x2052\.227-7013\.\r\n\r\n\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20HEWLETT-PACKARD\x20COMPANY,\x203000\x20Hanove
+SF:r\x20St\.,\x20Palo\x20Alto,\x20CA\x2094303\r\n\r\nWe'd\x20like\x20to\x2
+SF:0keep\x20you\x20up\x20to\x20date\x20about:\r\n\x20\x20\*\x20Software\x2
+SF:0feature\x20updates\r\n\x20\x20\*\x20New\x20product\x20announcements\r\
+SF:n\x20\x20\*\x20Special\x20events\r\n\r\nPlease\x20register\x20your\x20p
+SF:roducts\x20now\x20at:\x20\x20www\.ProCurve\.com\r\n\r\n\r\n\x1b\[1;24r\
+SF:x1b\[1;1H\x1b\[24;1HPress\x20any\x20key\x20to\x20continue\x1b\[24;1H\x1
+SF:b\[\?25h\x1b\[24;27H")%r(GenericLines,41B,"\xff\xfd\x18\xff\xfd\x1f\xff
+SF:\xfb\x01\x1b\[2J\x1b\[\?7l\x1b\[3;23r\x1b\[\?6l\x1b\[1;1H\x1b\[\?25l\x1
+SF:b\[1;1HProCurve\x20J9146A\x202910al-24G-PoE\x20Switch\r\r\nSoftware\x20
+SF:revision\x20W\.14\.38\r\r\n\r\r\nCopyright\x20\(C\)\x201991-2009\x20Hew
+SF:lett-Packard\x20Co\.\x20\x20All\x20Rights\x20Reserved\.\r\n\r\n\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20RESTRICTED\x20RIGHTS\x20LEGEND\r\n\r\n\x20
+SF:Use,\x20duplication,\x20or\x20disclosure\x20by\x20the\x20Government\x20
+SF:is\x20subject\x20to\x20restrictions\r\n\x20as\x20set\x20forth\x20in\x20
+SF:subdivision\x20\(b\)\x20\(3\)\x20\(ii\)\x20of\x20the\x20Rights\x20in\x2
+SF:0Technical\x20Data\x20and\r\n\x20Computer\x20Software\x20clause\x20at\x
+SF:2052\.227-7013\.\r\n\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20HEWLETT-PAC
+SF:KARD\x20COMPANY,\x203000\x20Hanover\x20St\.,\x20Palo\x20Alto,\x20CA\x20
+SF:94303\r\n\r\nWe'd\x20like\x20to\x20keep\x20you\x20up\x20to\x20date\x20a
+SF:bout:\r\n\x20\x20\*\x20Software\x20feature\x20updates\r\n\x20\x20\*\x20
+SF:New\x20product\x20announcements\r\n\x20\x20\*\x20Special\x20events\r\n\
+SF:r\nPlease\x20register\x20your\x20products\x20now\x20at:\x20\x20www\.Pro
+SF:Curve\.com\r\n\r\n\r\n\x1b\[1;24r\x1b\[1;1H\x1b\[24;1HPress\x20any\x20k
+SF:ey\x20to\x20continue\x1b\[24;1H\x1b\[\?25h\x1b\[24;27H\x1b\[2J\x1b\[\?7
+SF:l\x1b\[1;24r\x1b\[\?6l\x1b\[24;27H\x1b\[1;24r\x1b\[24;1H\x1b\[24;1H\x1b
+SF:\[2K\x1b\[24;1H\x1b\[\?25h\x1b\[24;1H\x1b\[24;1HREX#\x20\x1b\[24;1H\x1b
+SF:\[24;6H\x1b\[24;1H\x1b\[\?25h\x1b\[24;6H\x1b\[24;0H\x1b");
+MAC Address: E4:11:5B:6A:64:80 (Hewlett Packard)
+Device type: switch
+Running: HP embedded
+OS CPE: cpe:/h:hp:procurve_switch_2910al
+OS details: HP ProCurve 2910al switch
+Network Distance: 1 hop
+Service Info: Host: REX; CPE: cpe:/h:hp:procurve_switch_2910al-24g-poe, cpe:/o:hp:procurve_switch_software
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   5.97 ms 192.168.1.17
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 133.55 seconds
