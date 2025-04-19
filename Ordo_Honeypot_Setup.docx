@@ -1,0 +1,111 @@
+Ordo Honeypot Setup
+This document outlines the steps to set up Ordo as a Windows-based honeypot in your cyber lab. Ordo will be used to lure attackers and record interactions, which will be monitored and logged on Tech.
+1. Honeyport Setup (PowerShell-based Honeypot)
+Honeyport is a simple, PowerShell-based honeypot that listens on specific ports and logs connections. Here’s how to set it up:
+
+a. Download Honeyport from GitHub or create the script yourself.
+
+PowerShell script:
+------------------
+param (
+    [int[]]$Ports = @(21, 22, 23, 80, 445)
+)
+
+foreach ($port in $Ports) {
+    Start-Job -ScriptBlock {
+        param ($p)
+        $listener = [System.Net.Sockets.TcpListener]$p
+        $listener.Start()
+        Write-Output "Listening on port $p..."
+        while ($true) {
+            $client = $listener.AcceptTcpClient()
+            $client.Close()
+        }
+    } -ArgumentList $port
+}
+
+b. Run the script:
+------------------
+powershell -ExecutionPolicy Bypass -File .\Honeyport.ps1
+
+2. OpenCanary Setup (Simulating Fake Services)
+OpenCanary is a tool that simulates various network services such as SSH, HTTP, FTP, and SMB to lure attackers. It will also log interactions to be forwarded to Tech.
+
+a. Install Python and OpenCanary.
+
+Python Install:
+---------------
+Download Python 3.x from python.org and add to PATH during installation.
+
+b. Install OpenCanary:
+
+pip install opencanary
+opencanary --copyconfig
+
+c. Modify the configuration file (~/.opencanary.conf) to enable services:
+
+Example configuration:
+------------------------
+{
+  "ftp.enabled": true,
+  "http.enabled": true,
+  "smb.enabled": true,
+  "mysql.enabled": true,
+  "ssh.enabled": true,
+  "logger.syslog": {
+    "enabled": true,
+    "host": "192.168.50.X",  # Replace with Tech's IP
+    "port": 514,
+    "protocol": "udp"
+  }
+}
+
+d. Start OpenCanary:
+---------------------
+opencanaryd --start
+
+3. NXLog Setup (Log Forwarding to Tech)
+NXLog will forward Windows event logs and other activities on Ordo to Tech. This will help in monitoring login attempts, RDP access, and file access events.
+
+a. Download NXLog from the community edition page.
+
+b. Configure NXLog to forward logs to Tech:
+
+Edit nxlog.conf:
+------------------
+<Input in>
+    Module im_msvistalog
+</Input>
+
+<Output out>
+    Module om_udp
+    Host 192.168.50.X       # Tech's IP
+    Port 514
+</Output>
+
+<Route 1>
+    Path in => out
+</Route>
+
+c. Restart NXLog service:
+
+Restart-Service nxlog
+
+4. Weak Password Setup
+For the honeypot to be realistic, set weak login credentials that attackers might attempt to exploit. Here's how to create a weak user account:
+
+a. Create a weak user account:
+
+net user attacker Welcome123 /add
+net localgroup administrators attacker /add
+
+b. Optional: Add a comment to the account:
+
+net user attacker /comment:"Temporary access for vendor"
+
+c. Enable Remote Desktop (RDP) and SMB:
+
+Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" -Value 0
+New-SmbShare -Name Finance -Path C:\Finance -FullAccess attacker
+
