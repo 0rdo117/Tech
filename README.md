@@ -31,14 +31,13 @@ This repository documents the setup and configuration of my Cyber Lab, focused o
   - **CPU**:  Dual Intel Xeon Gold 6130 @ 2.10GHz  
   - **RAM**: 64GB DDR4 (split between processors)  
   - **Storage**: 7.2TB 10K SAS (expanding soon)  
-- **Red Team Machine**: Kali (Hunter)  
 - **Security Monitoring**: Security Onion (VM)
 
-- - **Server**: HP ProLiant DL360p Gen8 (Rocky/Alma) (Tech)  
+- **Server**: HP ProLiant DL360p Gen8 (Rocky/Alma) (Tech)  
   - **CPU**: Intel Xeon E5-2620 @ 2.10GHz  
   - **RAM**: 112GB DDR3   
   - **Storage**: 146GB 10K SAS (expanding soon)  
-
+- **Red Team Machine**: Kali (Hunter)  
 
 ### **Other Components**  
 - **Firewall**: pfSense (VM)  
