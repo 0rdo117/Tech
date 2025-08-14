@@ -1,18 +1,19 @@
-# Tech:
+# Echo:
 Cyber Lab for C|ND & C|EH into DevSecOps
 
 📜 Overview
 
-This repository documents the setup and configuration of my Cyber Lab, focused on integrating Certified Network Defender (C|ND) and Certified Ethical Hacker (C|EH) methodologies into a DevSecOps environment.
+This repository documents the setup and configuration of my Cyber Lab, focused on integrating Certified Network Defender (C|ND)/ Security+ and Certified Ethical Hacker (C|EH) methodologies into a DevSecOps environment. This Lab is for me to gain experience 
 
 
 🎯 Objectives:
 
 - Build a secure and segmented lab environment.
-- Implement Kali Purple machine for Red Testing.
+- Implement Kali machine for Red Testing.
+- Integrate a RedHat-based server for attack automation.
 - Deploy Suricata, Snort (via Docker containers) for network monitoring and threat detection.
-- Deploy pfSense (FreeBSD) via Virtual Machine for Cyber Lab Firewall.
-- Security Onion (VM) planned for future implementation.
+- Deploy pfSense Firewall via Virtual Machine for Cyber Lab Firewall.
+- Security Onion (VM) for SOC operations.
 - Integrate DevSecOps practices for continuous security monitoring and automation.
 - Conduct Hydra testing and other red team exercises.
 
@@ -31,7 +32,12 @@ This repository documents the setup and configuration of my Cyber Lab, focused o
   - **RAM**: 64GB DDR4 (split between processors)  
   - **Storage**: 7.2TB 10K SAS (expanding soon)  
 - **Red Team Machine**: Kali (Hunter)  
-- **Security Monitoring**: Security Onion (VM) 
+- **Security Monitoring**: Security Onion (VM)
+
+- - **Server**: HP ProLiant DL360p Gen8 (Rocky/Alma) (Tech)  
+  - **CPU**: Intel Xeon E5-2620 @ 2.10GHz  
+  - **RAM**: 112GB DDR3   
+  - **Storage**: 146GB 10K SAS (expanding soon)  
 
 
 ### **Other Components**  
@@ -45,23 +51,23 @@ This repository documents the setup and configuration of my Cyber Lab, focused o
 | Device              | IP Address      | Role                  |
 |---------------------|-----------------|-----------------------|
 | Router              | 192.168.x.1     | Gateway               |
-| pfSense Firewall (VM)| 192.168.x.2      | Network Segmentation  |
-| HP ProCurve Switch   | 192.168.x.3      | Core Switch           |
-| Hunter (Kali Purple) | 192.168.x.100    | Red Team Testing      |
-| Security Onion (VM)  | 192.168.x.101    | Network Monitoring    |
-| Splunk (VM)          | 192.168.x.102    | Log Collection        |
+| pfSense Firewall (VM)| 10.0.x.x       | Network Segmentation  |
+| Winodws 10           | 10.x.x.x       | Honeypot              |
+| Hunter (Kali Purple) | 192.168.x.x    | Red Team Testing      |
+| Security Onion (VM)  | 10.x.x.x       | Network Monitoring    |
+| IDS Container        | 10.x.x.x       | Honeypot Monitor      |
+| Tech                 | 192.168.x.x    | Red Team Automation   |
+| Echo                 | 10.0.x.x       | Holds SOC             |
 
 
 ### **VLANs & Segmentation**  
-- **VLAN 20**: Management Network  
-- **VLAN 30**: Security Tools  
-- **VLAN 40**: Red Team Testing  
-- **VLAN 50**: Guest/IoT Devices
+- **VLAN 70**: Management Network  
+- **VLAN 30**: Honeypot 
+- **VLAN 40**: Security Onion
+- **VLAN 50**: IDS Container
 
 
 ## Future Plans & Upgrades  
-- [ ] Add an extra hard drive for HP ProLiant DL360p Gen8  
-- [ ] Expand memory allocation for Security Onion VM  
-- [ ] Test Suricata rule tuning for improved detection  
+- [ ] Add an extra hard drive for HP ProLiant DL360p Gen8    
 - [ ] Implement containerized SOC tools for automation  
-- [ ] Improve on Echo for EMS Project
+
