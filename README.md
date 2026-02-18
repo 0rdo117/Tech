@@ -61,9 +61,9 @@ Val Skirata is intended to function as a small-scale model of an enterprise secu
   - **Storage**: 146GB 10K SAS (expanding soon)  
 - **Red Team Machine**: Kali (Hunter)
    - HP Pavilion
-      - AMD Phenom II N620 Dual-Core @2.80 GHz
-      - 8GB Ram
-      - ~500GB HDD 
+     - AMD Phenom II N620 Dual-Core @2.80 GHz
+     - 8.00 GB Ram
+     - ~500GB HDD 
 
 ### **Other Components**  
 - **Firewall**: OPNSense (VM)  
