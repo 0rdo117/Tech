@@ -50,9 +50,10 @@ Val Skirata is intended to function as a small-scale model of an enterprise secu
   - **Storage**: 7.2TB 10K SAS (expanding soon)  
 - **Security Monitoring**: Security Onion (VM) (DeathWatch)
 - **Honeypot**: Windows 10 (Ordo)
-  -
-  -
-  -
+  - HP Notebook
+    - Intel Core i3-6100U @2.30GHz
+    - 8.00 GB Ram
+    - 932 GB HDD
 
 - **Server**: HP ProLiant DL360p Gen8 (Rocky/Alma) (Tech)  
   - **CPU**: Intel Xeon E5-2620 @ 2.10GHz  
